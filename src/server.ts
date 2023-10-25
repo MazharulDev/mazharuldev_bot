@@ -9,5 +9,8 @@ bot.on("message", (message: any) => {
   console.log(message);
   // send a message to the chat acknowledging receipt of their message
   //   bot.sendMessage(chatId, "Received your message");
-  bot.sendMessage(message.from.id, "I'm busy, I will reply for free.");
+  // bot.sendMessage(message.from.id, "I'm busy, I will reply for free.");
+  if (message?.text === "hello") {
+    bot.sendMessage(message.form.id, "hi");
+  }
 });
